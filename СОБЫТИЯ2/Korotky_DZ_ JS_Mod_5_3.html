@@ -1,0 +1,40 @@
+<!--Задание 3-->
+<!--Создать html-страницу с кнопкой Like, при нажатии на которую увеличивается счетчик -->
+<!--лайков, без перезагрузки страница-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        #main{
+            background: cornflowerblue;
+            position: relative;
+            height: 100px;
+            width: 350px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            font-size: 60px;
+            padding-left: 40px;
+            color: white;
+            -webkit-user-select: none;
+        }
+        img{
+            padding-right: 15px;
+        }
+        #count{
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main"><img src="img/icons8-нравится-96.png"> Like <span id="count"> 10</span></div>
+
+    <script src="js/script_5.3.js"></script>
+</body>
+</html>

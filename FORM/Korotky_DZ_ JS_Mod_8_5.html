@@ -1,0 +1,166 @@
+<!--Создать html-страницу с возможностью отмечать присутствующих на паре. Для начала -->
+<!--пользователь выбирает группу и пару, дальше вводит тему занятия и отмечает -->
+<!--присутствующих. Также добавить возможность посмотреть уже отмеченные пары. Хранить-->
+<!--информацию в заранее подготовленных массивах.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background: #fbf2ea;
+            margin-left: 13%;
+            height: 350px;
+            width: 600px;
+        }
+        #mark{
+            visibility: hidden;
+        }
+        select{
+            margin-right: 20px;
+            height: 21px;
+        }
+        #select2{
+            width: 60px;
+        }
+        #buttSelect{
+            width: 60px;
+        }
+        hr{
+            background: #777677;
+            border: none;
+            height: 1px;
+        }
+        .hName{
+            background: #fbf2ea;
+            border-top: 1px dotted;
+        }
+        .nameStudSpan{
+            margin-right: 195px;
+        }
+        #nameSpan{
+            margin-right: 220px;
+        }
+        form{
+            margin-left: 5px;
+        }
+        .forCheckbox{
+            position: relative;
+            height: 10px;
+            width: 10px;
+            padding-top: 2px;
+        }
+        input[type='checkbox']{
+            display: none;
+        }
+        .rBn1{
+          position: absolute;
+          top: 40%;
+          bottom: 0;
+          left: 101.4%;
+          right: -6%;
+          background: #FFFFFF;
+          border: 1px solid #636565;
+          border-radius: 2px;
+          visibility: hidden;
+        }
+        .rBn1::before{
+          content: "";
+          position: absolute;
+          top: 2%;
+          bottom: 0%;
+          left: 2%;
+          right: 2%;
+          background-image: url("img/1.png");
+          background-repeat: no-repeat;
+          background-size: 10px 10px;
+          z-index: -1;
+        }
+        .rB1:checked + .rBn1::before{
+          z-index: auto;
+        }
+        #f2{
+            margin-top: 30px;
+        }
+        #topic{
+            margin-bottom: 30px;
+            width: 91.1%;
+            visibility: hidden;
+            padding-left: 20px;
+        }
+        #topicOut{
+            padding-left: 24px;
+            position: absolute;
+        }
+        #buttSave{
+            width: 100%;
+            margin-top: 10px;
+        }
+        .pres{
+        }
+    </style>
+</head>
+<body>
+    <div id="choose">
+        <form>
+            <label>
+                <span>Group:</span>
+                <select id="select1">
+                    <option id="gr1" value="1">Group 1</option>
+                    <option id="gr2" value="2">Group 2</option>
+                    <option id="gr3" value="3">Group 3</option>
+                </select>
+            </label>
+            <label>
+                <span>Lesson:</span>
+                <select id="select2">
+                    <option id="les1" value="1">1</option>
+                    <option id="les2" value="2">2</option>
+                    <option id="les3" value="3">3</option>
+                </select>
+            </label>
+            <button type="button" id="buttSelect">Select</button>
+        </form>
+        <hr>
+    </div>
+    <div id="mark">
+        <form id="f2">
+            <label>
+                <span>Topic:</span><span id="topicOut"></span>
+                <input type="text" id="topic">
+            </label>
+            <span id="nameSpan">Name</span><span>Is Present</span><br>
+            <hr class="hName">
+            <label class="forCheckbox">
+                <span class="nameStudSpan">Student 1</span>
+                <input type="checkbox" class="rB1">
+                <span class="rBn1"></span>
+                <span class="pres"></span>
+            </label><br>
+            <hr class="hName">
+            <label class="forCheckbox">
+                <span class="nameStudSpan">Student 2</span>
+                <input type="checkbox" class="rB1">
+                <span class="rBn1"></span>
+                <span class="pres"></span>
+            </label><br>
+            <hr class="hName">
+            <label class="forCheckbox">
+                <span class="nameStudSpan">Student 3</span>
+                <input type="checkbox" class="rB1">
+                <span class="rBn1"></span>
+                <span class="pres"></span>
+            </label>
+            <hr class="hName">
+            <button type="button" id="buttSave">Save</button>
+        </form>
+    </div>
+    <script src="js/script_8.5.js"></script>
+</body>
+</html>
+

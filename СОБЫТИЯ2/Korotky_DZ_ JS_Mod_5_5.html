@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      *{
+        box-sizing: border-box;       /*всегда отключаю внутренние отступы*/
+      }
+      body{
+        background: antiquewhite;
+      }
+      div{
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 250px;
+        height: 55px;
+        font-size: 40px;
+        background: white;
+        margin-bottom: 15px;
+        border: 1px solid black;
+      }
+      #main{
+        position: absolute;
+        right: 8px;
+      }
+      #table{
+        border-collapse: collapse;
+        border: 1px solid black;
+        height: 250px;
+        width: 250px;
+        font-size: 40px;
+        text-align: center;
+        background: #edeeee;
+        -webkit-user-select: none;          /*отключил копирование*/
+
+      }
+      td{
+        border: 1px solid black;
+      }
+    </style>
+</head>
+<body>
+  <div><span id="main"></span></div>
+  <table id="table">
+    <tr>
+      <td>7</td>
+      <td>8</td>
+      <td>9</td>
+      <td>+</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>*</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td colspan="2">=</td>
+      <td>/</td>
+    </tr>
+  </table>
+  <script src="js/script_5.5.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!--2. Разместите на странице 4 блока, как показано на рисунке. Напишите инструкции, -->
+<!--меняющие цвет нижнего блока в зависимости от того, на каком из верхних блоков -->
+<!--находится указатель мыши. Если указатель не находится ни над одним из верхних -->
+<!--блоков, нижний блок должен приобрести серый цвет.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            height: 2000px;
+            width: 2000px;
+        }
+        div {
+            height: 200px;
+            width: 200px;
+            float: left;
+            margin: 0px 15px 15px 0px;
+        }
+        #d1{
+            background-color: green;
+        }
+        #d2{
+            background: yellow;
+        }
+        #d3{
+            background: orange;
+        }
+        #d4{
+            background: gray;
+            clear: both;
+            margin-left: 215px;
+        }
+    </style>
+</head>
+<body id="main">
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+    <div id="d4"></div>
+    <script src="js/script_4.2.js"></script>
+</body>
+</html>
+
+<!--Можно ли в одном addEventListener прописать сразу 2 обработчика? и "mouseover"-->
+<!--и "mouseout"-->

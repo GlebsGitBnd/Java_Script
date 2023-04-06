@@ -1,0 +1,63 @@
+<!--Создать html-страницу с текстом и палитрой цветов. При клике на цвет палитры, -->
+<!--должен изменяться цвет текста на выбранный. Для указания, какой ячейке какой -->
+<!--цвет соответствует, можно использовать атрибут data-color в каждой ячейке, а -->
+<!--потом с помощью JS получать необходимый цвет из этого атрибута-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+       #main{
+       }
+       #palette{
+           height: 93px;
+           width: 490px;
+           border: 1px solid black;
+       }
+       .everyDiv{
+           height: 40px;
+           width: 50px;
+           float: left;
+           margin: 4px 0 0 4px;
+       }
+       p {
+           clear: both;
+       }
+    </style>
+</head>
+<body id="main">
+    <div id="palette" data-color="#eae3db">
+        <div class="everyDiv" data-color="#000000"></div>
+        <div class="everyDiv" data-color="#8b8b8b"></div>
+        <div class="everyDiv" data-color="#920b19"></div>
+        <div class="everyDiv" data-color="#f01c28"></div>
+        <div class="everyDiv" data-color="#ffff07"></div>
+        <div class="everyDiv" data-color="#25b956"></div>
+        <div class="everyDiv" data-color="#01aceb"></div>
+        <div class="everyDiv" data-color="#4952d3"></div>
+        <div class="everyDiv" data-color="#ac53af"></div>
+        <div class="everyDiv" data-color="#ffffff"></div>
+        <div class="everyDiv" data-color="#d8d8d8"></div>
+        <div class="everyDiv" data-color="#c18561"></div>
+        <div class="everyDiv" data-color="#fec7d1"></div>
+        <div class="everyDiv" data-color="#f1e8b8"></div>
+        <div class="everyDiv" data-color="#bceb20"></div>
+        <div class="everyDiv" data-color="#a2deee"></div>
+        <div class="everyDiv" data-color="#7b9cc5"></div>
+        <div class="everyDiv" data-color="#cfc6eb"></div>
+        <span style="clear: left"></span>
+    </div>
+    <p>What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and
+        typesetting industry. Lorem Ipsum has been the industry's standard dummy
+        text ever since the 1500s, when an unknown printer took a galley of type
+        and scrambled it to make a type specimen book. It has survived not only
+        five centuries, but also the leap into electronic typesetting, remaining
+        essentially unchanged. It was popularised in the 1960s with the release
+        of Letraset sheets containing Lorem Ipsum passages, and more recently
+        with desktop publishing software like Aldus PageMaker including versions
+        of Lorem Ipsum.
+    <script src="js/script_7.2.js"></script>
+</body>
+</html>

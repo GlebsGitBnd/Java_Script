@@ -1,0 +1,21 @@
+ВАРИАНТ1
+{
+    "name": "Gleb",
+    "surname": "Korotky",
+    "age": 23,
+    "weight": "70kg",
+    "height": "175cm",
+    "address": [
+        "Voronesh",
+        "Ostuzheva",
+        "29a",
+        "76"
+    ],
+    "student" : true,
+    "profession" : "Programmer",
+    "date": "2022-12-16T11:04:01.584Z"
+}
+
+ВАРИАНТ2
+
+{"name":"Gleb","surname":"Korotky","age":23,"weight":"70kg","height":"175cm","address":["Voronesh","Ostuzheva","29a","76"],"student":true,"profession":"Programmer","date":"2022-12-16T11:04:01.584Z"}

@@ -1,0 +1,93 @@
+<!--Создать html-страницу для прохождения теста. Вопросы теста-->
+<!--имеют два варианта ответа (только 1 правильный). После прохож- -->
+<!--дения теста, вывести количество правильных ответов.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+        }
+        .question{
+            height: 110px;
+            width: 500px;
+            background: #fbf2ea;
+            margin: 15px auto;
+            padding: 1px 0 0 10px;
+        }
+        #answer{
+            display: flex;
+            align-items: center;
+            height: 30px;
+            width: 500px;
+            background: #fbf2ea;
+            margin: 15px auto;
+            padding: 1px 0 0 10px;
+        }
+        #outputQes{
+            visibility: hidden;
+        }
+        .label{                                     /*изменение кнопки радио*/
+            position: relative;
+            display: inline-block;
+            height: 15px;
+            width: 15px;
+            margin-top: 4px;
+            padding-top: 2px;
+            border-radius: 50%;
+            opacity: 0.33;
+        }
+        .rB{
+            display: none;
+        }
+        .rBn{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #FFFFFF;
+            border: 1px solid #636565;
+            border-radius: 50%;
+        }
+        .rBn::before{             /*изменение кнопки радио в включеном положении*/
+            content: "";
+            position: absolute;
+            top: 25%;
+            bottom: 25%;
+            left: 25%;
+            right: 25%;
+            background: #777677;
+            border-radius: 50%;
+            z-index: -1;
+        }
+        .rB:checked + .rBn::before{
+            z-index: auto;
+        }
+        .ans{
+            display: flex;
+            margin: -3px 0 0 20px;
+        }
+        form{
+            margin-top: -15px;
+        }
+        button{
+            margin-top: 4px;
+            height: 20px;
+            width: 90px;
+        }
+    </style>
+</head>
+<body>
+    <div id="fullQuestions"></div>
+    <div id="answer">
+        <p id="outputQes">Result:<span id="out"></span> correct answer to 5 questions.</p>
+    </div>
+    <script src="js/script_8.2.js"></script>
+</body>
+</html>

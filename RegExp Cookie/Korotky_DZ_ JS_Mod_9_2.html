@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background: #fbf2ea;
+            height: 350px;
+            width: 750px
+        }
+        hr{
+            margin-left: 15%;
+            width: 525px;
+            background: #777677;
+            border: none;
+            height: 1px;
+        }
+        #sectFirst{
+            position: relative;
+            height: 10px;
+        }
+        #sectSecond{
+            position: relative;
+            display: grid;
+            justify-content: center;
+            margin-top: -12px;
+            margin-left: -10px;
+            font-size: 15px;
+        }
+        label{
+            position: relative;
+        }
+        input,select{
+            width: 252px;
+            height: 22px;
+            font-size: 10px;
+            margin-bottom: 8px;
+            outline: none;
+            border-radius: 3px;
+            border: 1px solid gray;
+        }
+        #saveSub{
+            width: 525px;
+            font-size: 13px;
+        }
+        form{
+            position: absolute;
+            top: 100%;
+            left: 16.5%;
+            font-size: 13px;
+        }
+        p{
+            text-align: center;
+        }
+        #hello{
+            position: absolute;
+            right: 15%;
+            font-size: 10px;
+        }
+        .divForm{
+            float: left;
+            margin-right: 20px;
+        }
+        .wrong{
+            position: absolute;
+            right: 0;
+            color: #be3d3d;
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body onload="checkCookie();checkData();">
+    <div id="sectFirst">
+        <div id="hello">
+            Hello, <span id="email"></span>
+            <a href="Korotky_DZ_%20JS_Mod_9_1.html" onclick="clearCookie()">exit</a>
+        </div>
+    </div>
+    <hr>
+    <div id="sectSecond">
+        <p>User Info</p>
+        <form method="GET" id="regForm" onsubmit= "return checkForm ()">
+            <div class="divForm">
+                <label>
+                    <span>First Name:</span><span class="wrong">wrong first name</span><br>
+                    <input type="text" name="fName">
+                </label><br>
+                <label>
+                    <span>Year of birth:</span><span class="wrong">wrong year</span><br>
+                    <input type="text">
+                </label><br>
+                <label>
+                    <span>Phone number:</span><span class="wrong">wrong number</span><br>
+                    <input type="text">
+                </label>
+            </div>
+            <div class="divForm">
+                <label>
+                    <span>Last Name:</span><span class="wrong">wrong last name</span><br>
+                    <input type="text" name="lName">
+                </label><br>
+                <label>
+                    <span>Gender:</span><span class="wrong">wrong skype name</span><br>
+                    <select>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </label><br>
+                <label>
+                    <span>Skype:</span><span class="wrong">wrong skype name</span><br>
+                    <input type="text" name="skype">
+                </label>
+            </div>
+            <label>
+                <input name="save" id="saveSub" type="submit" value="Save">
+            </label>
+        </form>
+    </div>
+    <script src="js/script_2.js"></script>
+</body>
+</html>

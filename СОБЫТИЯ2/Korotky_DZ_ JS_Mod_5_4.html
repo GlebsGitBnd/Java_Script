@@ -1,0 +1,61 @@
+<!--Задание 4-->
+<!--Создать html-страницу со вкладками. С левой стороны страницы отображается -->
+<!--несколько вкладок, по которым можно переключаться. У каждой вкладки есть свое -->
+<!--содержимое, но в один момент времени отображается содержимое только активной вкладки.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        #first{
+            height: 200px;
+            width: 570px;
+            background: #4f4ea8;
+            position: relative;
+        }
+        #second{
+            height: 196px;
+            width: 500px;
+            position: absolute;
+            background: antiquewhite;
+            right: 2px;
+            top: 2px;
+            padding: 10px;
+        }
+        #HTML_tab,#CSS_tab,#JS_tab{
+            color: white;
+            height: 30px;
+            width: 68px;
+            font-size: 15px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            padding-left: 15px;
+        }
+        #tab{
+            display: inline-block;
+            margin-top: 40px;
+        }
+        span{
+            display: inline-block;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="first">
+        <div id="second"></div>
+        <div id="tab">
+            <div id="HTML_tab">HTML</div>
+            <div id="CSS_tab">CSS</div>
+            <div id="JS_tab">JS</div>
+        </div>
+    </div>
+    <script src="js/script_5.4.js"></script>
+</body>
+</html>

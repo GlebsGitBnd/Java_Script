@@ -1,0 +1,85 @@
+<!--Создать html-страницу, на которой пользователь может ввести номер месяца, год,-->
+<!--и получить календарь на указанный месяц. Календарь можно генерировать с помощью -->
+<!--таблицы. Начальный день недели всегда должен быть понедельник.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        #headId{
+            margin: 60px 0 0 50px;
+            background: #eeb27f;
+            width: 500px;
+            height: 400px;
+            padding: 50px 0 0 75px;
+
+        }
+        #generateId{
+            margin-top: 15px;
+            width: 350px;
+        }
+        input{
+            width: 100px;
+            margin-right: 40px;
+        }
+        table{
+            border-collapse: collapse;
+        }
+        td, th{
+            border: 1px solid black;
+            width: 50px;
+            height: 20px;
+            font-size: 14px;
+            text-align: center;
+        }
+        p{
+            margin: 40px 0 25px 0;
+            font-weight: bold;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div id="headId">
+            <label id="labelId">
+                <span>Month:</span>
+                <input type="number" min="1" max="12" step="1" name="month" id="monthId">
+                <span>Year:</span>
+                <input type="number" name="year" id="yearId" min="1" step="1"> <br>
+                <button type="button" name="generate" id="generateId">Generate</button>
+            </label>
+            <p id="printDate">Month, Year</p>
+            <table id="table">
+                <tr>
+                    <th>MON</th><th>TUE</th><th>WED</th><th>THU</th><th>FRI</th><th>SUT</th><th>SUN</th>
+                </tr>
+                <tr>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                     <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                     <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                     <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                     <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                     <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+            </table>
+        </div>
+    </form>
+    <script src="js/script_6.5.js"></script>
+</body>
+</html>

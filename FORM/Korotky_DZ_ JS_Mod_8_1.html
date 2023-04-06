@@ -1,0 +1,124 @@
+<!--Создать html-страницу со списком сообщений на форуме и-->
+<!--формой для добавления нового сообщения. После заполнения-->
+<!--формы добавить сообщение к списку на экране.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{                                          /*общий стиль*/
+            box-sizing: border-box;
+        }
+        body{
+            background: #fbf2ea;
+            margin: 30px;
+        }
+        .divForCom{                                  /*окно с комментариями*/
+            position: relative;
+            width: 100%;
+            border: 2px solid gray;
+            font-size: 11px;
+            margin-bottom: 20px;
+        }
+        .divForSpendComm{                               /*див с формами*/
+            position: relative;
+            text-align: center;
+            font-size: 11px;
+            width: 100%;
+        }
+        hr{                                             /*линия под именем и временеи*/
+            width: 100.2%;;
+            margin-left: -0.1%;
+            background: #777677;
+            border: none;
+            height: 1px;
+            z-index: -1;
+        }
+        .headRight{                                     /*имя в окне с комментариями*/
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .headLeft,.headRight{                           /*время и имя в окне с комментариями*/
+            margin: 5px 15px 0 15px;
+        }
+        .text{                                          /*текст комментария*/
+            margin: 5px 15px 5px 15px;
+        }
+        textarea,input{                                 /*ввод имени и комментария*/
+            margin-top: 8px;
+            width: 91%;
+            margin-left: 9px;
+            font-size: 10px;
+        }
+        input{                                          /*ввод имени*/
+            margin-top: -5px;
+        }
+        form{                                           /*общий стиль для форм*/
+            text-align: right;
+        }
+        #s2{                                            /*спан у textarea*/
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 8px;
+        }
+        #send{                                          /*кнопка отправить*/
+            width: 100%;
+            height: 20px;
+            margin-top: 6px;
+            font-size: 10px;
+        }
+        span{                                           /*общий для спанов*/
+            display: inline-block;
+            width: 80px;
+            position: absolute;
+            left: 0;
+            text-align: left;
+        }
+        @media (max-width: 820px) {                     /*стили при уменьшении окна*/
+            textarea,input {
+                width: 85%;
+            }
+        }
+        @media (max-width: 599px) {
+            textarea,input {
+                width: 84%;
+            }
+        }
+        @media (max-width: 499px) {
+            textarea,input {
+                width: 75%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="divForCom">
+      <p class="headLeft" >Name</p>
+      <p class="headRight" id="dateCom">dfsd</p>
+      <hr>
+      <p class="text">Lorem Ipsum is simply dummy text of the printing and
+      typesetting industry. Lorem Ipsum has been the industry's standard dummy
+      text ever since the 1500s, when an unknown printer took a galley of type
+      and scrambled it to make a type specimen book. It has survived not only
+      five centuries, but also the leap into electronic typesetting, remaining
+      essentially unchanged.</p>
+    </div>
+    <div id="fullComments"></div>
+    <div class="divForSpendComm">
+        <h4>Add new message:</h4>
+        <form>
+            <label>
+                <span id="s1"><b>Your name:</b></span>
+                <input id="nameInp"><br>
+                <span id="s2"><b>Your message:</b></span>
+                <textarea></textarea>
+                <button id="send" type="button">Send</button>
+            </label>
+        </form>
+    </div>
+    <script src="js/script_8.1.js"></script>
+</body>
+</html>

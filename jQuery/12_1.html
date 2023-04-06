@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            position: relative;
+            background: #fbf2ea;
+            height: 350px;
+            width: 750px;
+        }
+        input[name = 'digits']{
+            width: 30px;
+            height: 10px;
+            font-size: 8px;
+        }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+    </style>
+    <script src="js/jquery-3.6.2.min.js"></script>
+
+</head>
+<body>
+    <h4>Random String Generator</h4>
+    <form>
+        <label>
+            <span>String should be <input type="number" name="digits" id="dig"> characters long.</span>
+        </label>
+        <p>Which characters are allowed to occur in the string?</p>
+        <label>
+            <input type="checkbox" name="dig" class="checkB"><span>Numeric digits(0-9)</span><br>
+            <input type="checkbox" name="uppLet" class="checkB"><span>Uppercase letters(A-Z)</span><br>
+            <input type="checkbox" name="lowLet" class="checkB"><span>Lowercase letters(a-z)</span><br>
+        </label>
+        <button id="generate" type="button">Generate</button>
+        <hr>
+        <label>
+            <span id="result">Result:</span><input id="res" type="text" name="outStr">
+        </label>
+    </form>
+    <script src="js/script_1.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            display: grid;
+            justify-content: center;
+            background: #fbf2ea;
+            height: 350px;
+            width: 100%;
+        }
+        input{
+            margin-bottom: 10px;
+            height: 25px;
+            width: 300px;
+            font-size: 11px;
+        }
+        form{
+            font-size: 12px;
+            margin-top: -45%;
+        }
+        h4{
+            text-align: center;
+        }
+        div{
+            width: 300px;
+            position: relative;
+        }
+        .wrong{
+            position: absolute;
+            right: 0;
+            color: #be3d3d;
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body onload="checkCookie()">
+    <h4>Registration</h4>
+    <div>
+        <form method="GET" id="regForm" onsubmit= "return testData()">
+            <label>
+                <span>Email:</span><span class="wrong">Wrong email address</span><br>
+                <input type="email" name="email"><br>
+            </label>
+            <label>
+                <span>Password:</span><span class="wrong">Wrong password</span><br>
+                <input type="password" name="password"><br>
+            </label>
+            <label>
+                <span>Repeat:</span><span class="wrong">Password must match</span><br>
+                <input type="password" name="repPass"><br>
+            </label>
+            <label>
+                <input type="submit" value="Sing Up">
+            </label>
+        </form>
+    </div>
+    <script src="js/script_1.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!--Создать html-страницу с галереей.-->
+<!--В один момент времени на экране отображается одно изображение и две кнопки: -->
+<!--Назад и Вперед. При нажатии на кнопки изображения должны переключатся в указанном -->
+<!--порядке. Когда следующего/предыдущего изображения нет, то соответствующую-->
+<!--кнопку необходимо блокировать. Изображения хранить в заранее подготовленном массиве.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            position: relative;
+            background: #483f48;
+            margin: 0;
+            text-align: center;
+        }
+        img{
+            position: absolute;
+        }
+        #right{
+            top: 200px;
+            left: 90%;
+        }
+        #left{
+            top: 200px;
+            right: 90%;
+        }
+        #center{
+            position: absolute;
+            left: 33%;
+            height: 575px;
+        }
+    </style>
+</head>
+<body>
+    <img id="right" src="img/right.png"
+         alt="right">
+    <div><img id="center" src=""
+         alt="center">
+    </div>
+    <img id="left" src="img/left.png"
+         alt="left">
+
+    <script src="js/script_6.2.js"></script>
+</body>
+</html>

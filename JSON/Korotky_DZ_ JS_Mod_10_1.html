@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fbf2ea;
+            height: 350px;
+            width: 750px;
+        }
+        textarea{
+            height: 294px;
+            width: 300px;
+            outline: none;
+            border: 1px solid gray;
+            border-radius: 5px;
+            min-width: 300px;
+            max-width: 300px;
+            max-height: 294px;
+            font-size: 12px;
+        }
+        input{
+            transform: rotate(90deg);
+            width: 300px;
+            position: absolute;
+            left: 30.3%;
+            top: 50%;
+        }
+        label{
+            float: left;
+        }
+        #formate{
+            height: 297px;
+            width: 300px;
+            background: #FFFFFF;
+            margin-top: 15px;
+            margin-left: 55px;
+            border: 1px solid gray;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+        form{
+            margin-top: 25px;
+        }
+        span{
+            position: absolute;
+            display: flex;
+            margin-bottom: 12px;
+            float: left;
+            font-weight: bold;
+        }
+        #s1{
+            top: 2.5%;
+        }
+        #s2{
+            top: 2.5%;
+            margin-left: 27%;
+            color: #a13131;
+            visibility: hidden;
+        }
+        #s3{
+            top: 2.5%;
+            left: 54%;
+        }
+    </style>
+</head>
+<body>
+    <form method="get" onsubmit="formateData(event)">
+        <label>
+            <span id="s1">Enter JSON data:</span>
+            <span id="s2">[formate error]</span>
+            <textarea required></textarea>
+        </label>
+        <label id="l1">
+            <input type="submit" value="&#9650;">
+        </label>
+    </form>
+    <span id="s3">Formatted JSON data:</span>
+    <div id="formate"><pre id="output"></pre></div>
+    <script src="js/script.js"></script>
+</body>
+</html>

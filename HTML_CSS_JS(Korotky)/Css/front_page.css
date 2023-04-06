@@ -1,0 +1,259 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+    margin: 0;
+}
+header{
+    position: relative;
+    width: 98.9vw;
+    height: 15vh;
+    background: #42654e;
+    box-shadow: 0 3px 5px grey;
+}
+section{
+    width: 98.9vw;
+    float: left;
+    height: 1000px;
+}
+#menu,#headerOne,#registration,.aboutFamily,.aboutSport,.dots,.headerSport{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#headerOne{
+    font-family: "segoe print", monospace;
+    color: #42654e;
+    margin-top: 0;
+}
+.icn{
+    height: 30px;
+    width: 30px;
+    margin-right: 8px;
+}
+#registration{
+    font-size: 12px;
+    color: #c5bcbc;
+    position: absolute;
+    top: 0;
+    right: 2%;
+}
+#in{
+    height: 50px;
+    width: 50px;
+}
+.in:hover{
+    color: white;
+}
+#menu,#sun{
+    height: 100%;
+    width: 60px;
+    float: left;
+}
+#menu img{
+    position: absolute;
+    left: 2%;
+    height: 30px;
+    width: 30px;
+}
+#menu img:hover{
+    border-radius: 10%;
+    background: #344d3b;
+}
+.sun{
+    position: absolute;
+    right: 48%;
+    top: 2px;
+}
+#sun{
+    height: 48px;
+    width: 50px;
+}
+#health{
+    height: 300px;
+    width: 400px;
+}
+.health{
+    position: relative;
+    display: flex;
+    width: 76%;
+    margin-left: 30px;
+    border: 2px solid orange;
+    box-shadow:  -1px 1px 15px 3px orange;
+}
+.family{
+    width: 100%;
+}
+#imgMine{
+
+}
+.healthImg{
+    width: 50%;
+}.healthTxt{
+    width: 50%;
+}
+.aboutFamily,.aboutSport{
+    height: 10%;
+    width: 64%;
+    margin-top: 40px;
+    padding: 10px;
+    justify-content: left;
+    background: #42654e;
+    font-family: "segoe print", monospace;
+    box-shadow: 0 3px 5px grey;
+}
+.textAboutFamily{
+    position: relative;
+    width: 60%;
+    border: 2px solid orange;
+    box-shadow:  -1px 1px 15px 3px orange;
+    padding: 0 20px 0 20px;
+    margin: 30px;
+    float: right;
+}
+#tree{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -63%;
+}
+.owl-item{
+    height: 160px;
+}
+.owl-nav button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-60%);
+}
+.owl-prev{
+    left: -11%;
+}
+.owl-next{
+    right: -11%;
+}
+.owl-nav button img{
+    height: 60px;
+    width: 60px;
+}
+.imgMine{
+    width: 80%;
+    margin: 30px auto 20px auto;
+}
+.owl-dot{
+    height: 20px;
+    width: 20px;
+    margin-left: 18px;
+    border-radius: 50%;
+    border: none;
+    background-image: url("../Img/icons/noactive.png");
+    background-size: cover;
+}
+button{
+    background: white;
+}
+.owl-dot.active{
+    background-image: url("../Img/icons/active.png");
+}
+.hrGreen{
+    height: 2px;
+    background: #42654e;
+    border: none;
+}
+.aboutSport{
+    width: 50%;
+}
+.infoSport{
+    margin: 20px 0 0 10px;
+    display: flex;
+}
+.imgSportItem{
+    height: 380px;
+    width: 500px;
+    margin-right: 20px;
+    margin-top: 40px;
+    display: none;
+}
+.imgSportItem.active{
+    display: initial;
+}
+.whatSport{
+    height: 70px;
+    width: 100%;
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 15px;
+    border-left: 15px solid #737373;
+    font-family: monospace;
+    margin-top: -80px;
+}
+.yourHard{
+    width: 90%;
+    margin-left: 40px;
+    margin-right: 40px;
+    font-family: "century gothic", sans-serif;
+}
+.headerSport{
+    position: relative;
+    justify-content: left;
+    font-family: "corbel", sans-serif;
+    color: #654c36;
+}
+.headerSport img{
+    height: 40px;
+    width: 40px;
+    margin-right: 100px;
+    margin-left: 10px;
+}
+.sportType{
+    cursor: pointer;
+}
+.direction{
+    position: absolute;
+    right: 0;
+}
+.textSport{
+    font-family: "century gothic", sans-serif;
+    display: none;
+}
+.textSport.active{
+    display: initial;
+}
+.textImgSport1,.textImgSport2{
+    font-family: "lucida console", sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin: 40px 0 15px 30px;
+    width: 80%;
+}
+.textImgSport2{
+    margin-top: 20px;
+    font-weight: lighter;
+}
+
+
+
+
+.navigation{
+    position: absolute;
+    right: 0;
+    font-size: 15px;
+    width: 18%;
+    background: #e3af6d;
+    box-shadow: -3px 3px 5px grey;
+}
+.navigation ul{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-family: "comic sans ms", sans-serif;
+    font-size: 12px;
+    list-style-type: none;
+}
+.navigation ul li{
+    border-bottom: 1px solid #000000;
+    padding: 5% 1% 5% 1%;
+}
+.text{
+    font-family: "corbel", sans-serif;
+}

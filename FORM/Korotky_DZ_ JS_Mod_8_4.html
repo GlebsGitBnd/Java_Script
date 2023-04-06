@@ -1,0 +1,185 @@
+<!--Создать html-страницу для магазина книг.-->
+<!--Пользователь должен иметь возможность выбрать книгу,указать количество экземпляров, -->
+<!--ввести свое имя, дату доставки,адрес доставки и комментарий.После заполнения -->
+<!--формы необходимо вывести на экран: «Имя покупателя, спасибо за заказ. Такой-то -->
+<!--товар будет доставлен в такую-то дату по такому-то адресу».-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background: #fbf2ea;
+            margin-left: 13%;
+            height: 350px;
+            width: 600px;
+        }
+        .obl,#buyWin{
+            position: relative;
+            height: 195px;
+            width: 100px;
+            border: 1px solid gray;
+            margin-left: 8px;
+            padding: 0 4px;
+            float: left;
+        }
+        #buyWin{
+            width: 210px;
+            padding: 8px 8px;
+            line-height: 15px;
+            min-width: 200px;
+        }
+        .txtByWin{
+            display: grid;
+            font-size: 8px;
+        }
+        .bookName{
+            font-size: 8px;
+            font-weight: bold;
+            margin-top: -2px;
+        }
+        .scribe{
+            margin-top: -6px;
+            font-size: 6px;
+        }
+        .prise{
+            position: absolute;
+            font-weight: bold;
+            font-size: 11px;
+            float: right;
+            right: 6%;
+            bottom: 4%;
+        }
+        .select{
+            height: 14px;
+            width: 90%;
+            font-size: 10px;
+            position: absolute;
+            bottom: 3%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        img{
+            margin-top: 4px;
+        }
+        input,textarea{
+            height: 12px;
+            width: 60%;
+            font-size: 7px;
+            border-radius: 3px;
+            border: 1px solid gray;
+            outline:none;
+            margin-top: 4px;
+        }
+        #spanDate{
+            margin-top: 35px;
+        }
+        #txtar1{
+            height: 40px;
+            max-height: 50px;
+            max-width: 60%;
+            min-height: 40px;
+            min-width: 40%;
+        }
+        #txtar2{
+            height: 50px;
+            max-height: 63px;
+            max-width: 60%;
+            min-height: 30px;
+            min-width: 40%;
+        }
+        #buttBuy{
+            width: 100%;
+            height: 12px;
+            font-size: 7px;
+            margin-top: 4px;
+        }
+        form{
+            position: absolute;
+            bottom: 2.5%;
+            right: 2%;
+            text-align: right;
+        }
+        h3{
+            clear: both;
+            padding: 10px 7px;
+            visibility: hidden;
+        }
+        #result{
+            padding: 0 10px;
+            margin: -20px 7px;
+            height: 100px;
+            width: 535px;
+            border: 1px solid gray;
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="obl">
+        <img src="img/2.jpg"
+            height="120px"
+            width="90px"
+            alt="book1">
+        <p class="bookName">Learning JavaScript: JavaScript Essentials for Modern Application
+            Development</p>
+        <p class="scribe">Ethan Brown</p>
+        <p class="prise">16$</p>
+        <button type="button" class="select" name="book1">Select</button>
+    </div>
+    <div class="obl">
+        <img src="img/3.jpg"
+            height="120px"
+            width="90px"
+            alt="book2">
+        <p class="bookName">You Don't Know JS: Scope & Closures</p>
+        <p class="scribe">Kyle Simpson</p>
+        <p class="prise">20$</p>
+        <button type="button" class="select" name="book2">Select</button>
+    </div>
+    <div class="obl">
+        <img src="img/4.jpeg"
+            height="120px"
+            width="90px"
+            alt="book3">
+        <p class="bookName">JavaScript and JQuery: Interactive Front-End Web Development</p>
+        <p class="scribe">Jon Duckett</p>
+        <p class="prise">22$</p>
+        <button type="button" class="select" name="book3">Select</button>
+    </div>
+    <div id="buyWin">
+        <div>
+            <span class="txtByWin">Book:</span>
+            <span class="txtByWin">Quantity:</span>
+            <span class="txtByWin">Name:</span>
+            <span class="txtByWin">Delivery address:</span>
+            <span class="txtByWin" id="spanDate">DeliveryDate:</span>
+            <span class="txtByWin">Comment:</span>
+        </div>
+        <form>
+            <label>
+                <input type="text" name="book" disabled>
+                <input type="text" name="quantity"><br>
+                <input type="text" name="name"><br>
+                <textarea id="txtar1" name="address"></textarea><br>
+                <input  id="dataAd" type="date" name="delivDate"><br>
+                <textarea id="txtar2" name="comment"></textarea><br>
+               <button type="button" id="buttBuy">Buy</button>
+           </label>
+        </form>
+    </div>
+    <h3 id="hRes">Result:</h3>
+    <div id="result">
+        <p><span class="res"></span>, thanks for the order!</p>
+        <p>Book "<span class="res"></span>" will be delivered on <span class="res"></span>
+            to <span class="res"></span>.</p>
+    </div>
+    <script src="js/script_8.4.js"></script>
+</body>
+</html>

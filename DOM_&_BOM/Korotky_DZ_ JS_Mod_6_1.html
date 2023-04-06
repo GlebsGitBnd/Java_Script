@@ -1,0 +1,37 @@
+<!--Создать html-страницу с трекбаром. Предоставить пользователю возможность -->
+<!--изменять положение синего указателя.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            margin: 0;
+            background: #eeb27f;
+        }
+        #d1{
+            position: relative;
+            top: 250px;
+            left: 150px;
+            height: 15px;
+            width: 500px;
+            background: #777677;
+        }
+        #d2{
+            position: absolute;
+            top: -4px;
+            height: 24px;
+            width: 18px;
+            background: #8d99f8;
+        }
+    </style>
+</head>
+<body id="b1">
+    <div id="d1">
+        <div id="d2"></div>
+    </div>
+    <script src="js/script_6.1.js"></script>
+</body>
+</html>

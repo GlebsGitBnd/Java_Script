@@ -1,0 +1,45 @@
+<!--3. Разместите на странице 3 блока. Напишите инструкции, которые обеспечат -->
+<!--перемещение в точку, в которой находится указатель мыши:-->
+<!--первого блока — при нажатии левой клавиши мыши,-->
+<!--второго блока — при нажатии средней клавиши (или колеса),-->
+<!--третьего блока — при нажатии правой клавиши мыши.-->
+<!--Контекстное меню при нажатии правой клавиши мыши появляться не должно.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #main{
+            height: 2000px;
+            width: 2000px;
+            margin: 0px;
+            position: relative;
+        }
+        div {
+            height: 200px;
+            width: 200px;
+            position: absolute;
+
+        }
+        #d1{
+            background: green;
+        }
+        #d2{
+            background: yellow;
+            left: 215px;
+        }
+        #d3{
+            background: orange;
+            left: 430px;
+        }
+    </style>
+</head>
+<body id="main">
+  <div id="d1"></div>
+  <div id="d2"></div>
+  <div id="d3"></div>
+  <script src="js/script_4.3.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!--Задание 1-->
+<!--Создать html-страницу с таблицей. При наведении мышкой на ячейку таблицы, -->
+<!--у этой ячейки должен меняться фон. Учтите, что когда мышку уводят с ячейки, то -->
+<!--ее фон возвращается к прежнему. Выполнить задание с помощью JS, а не с помощью CSS.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table{
+            background: antiquewhite;
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+        td,th{
+            border: 1px solid black;
+            padding: 8px 15px 8px 15px;
+        }
+    </style>
+</head>
+<body>
+  <table id="table">
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Company</th>
+    </tr>
+    <tr>
+        <td>Bill</td>
+        <td>Gates</td>
+        <td>Microsoft</td>
+    </tr>
+    <tr>
+       <td>Timothy</td>
+        <td>Cook</td>
+        <td>Apple</td>
+    </tr>
+    <tr>
+        <td>Larry</td>
+        <td>Page</td>
+        <td>Google</td>
+    </tr>
+    <tr>
+        <td>Mark</td>
+        <td>Zuckerberg</td>
+        <td>Facebook</td>
+    </tr>
+  </table>
+  <script src="js/script_5.1.js"></script>
+</body>
+</html>

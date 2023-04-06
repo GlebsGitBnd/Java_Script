@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+              position: relative;
+              display: grid;
+              background: #fbf2ea;
+              width: 100vw;
+              justify-content: center;
+          }
+        #head,#infoFilms{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #infoFilms{
+            display: none;
+        }
+        #search{
+            position: relative;
+            height: 130px;
+            width: 360px;
+            border: 1px solid gray;
+            border-radius: 3px;
+            text-align: right;
+            padding: 0 10px 10px 10px;
+            margin-bottom: 20px;
+        }
+        #choose{
+            width: 710px;
+            margin-left: 25px ;
+        }
+        #infoOut{
+            position: relative;
+            margin-top: -11px;
+            width: 600px;
+            border: 1px solid gray;
+            border-radius: 2px;
+            padding: 10px 10px 0 10px;
+            font-size: 13px;
+        }
+        #close{
+            position: absolute;
+            top: 0;
+            right: 10%;
+        }
+        .spanInf{
+            font-size: 10px;
+            margin-right: 30px;
+            position: absolute;
+            left: 28%;
+        }
+        .pInf{
+            display: flex;
+            align-items: center;
+            margin-left: 250px;
+            margin-top: 0;
+            font-size: 13px;
+        }
+        .imgInfo{
+            height: 210px;
+            width: 150px;
+            margin-right: 100px;
+            position: absolute;
+            top: 3.6%;
+            left: 1.7%;
+        }
+        .place{                             /*назначается при добавлении дива с фильмом на строке 218*/
+            float: left;
+            border: 1px solid gray;
+            width: 210px;
+            height: 130px;
+            border-radius: 4px;
+            margin: 10px 20px 0 0;
+            padding: 8px;
+            line-height: 8px;
+        }
+        #error{
+            color: #932727;
+            font-size: 25px;
+            font-weight: 400;
+            text-align: center;
+        }
+        .type{
+            font-size: 10px;
+        }
+        .title{
+            height: 37px;
+            width: 100px;
+            overflow: hidden;
+            font-size: 12px;
+            line-height: 12px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3; /* номер строки где указывается троеточие */
+            -webkit-box-orient: vertical;
+        }
+        .year{
+            font-size: 13px;
+        }
+        .details{
+            margin-top: 10px;
+            width: 102px;
+            height: 20px;
+        }
+        img{
+            height: 110px;
+            width: 80px;
+            float: left;
+            margin-right: 8px;
+        }
+        input,select{
+            margin-top: 15px;
+            width: 220px;
+            height: 25px;
+            font-size: 12px;
+            padding-left: 10px;
+        }
+        .inp{
+            float: left;
+            margin-top: 15px;
+        }
+        #sub{
+            margin-right: 4%;
+            height: 25px;
+            width: 100%;
+        }
+        ul{
+            display: none;
+            justify-content: center;
+            clear: both;
+            margin-left: -60px;
+            user-select: none;
+        }
+        li{
+            list-style-type: none;
+            margin: 12px 2px;
+            border: 1px solid #565b5b;
+            border-radius: 2px;
+            height: 21px;
+            width: 28px;
+            text-align: center;
+        }
+        #startList,#lastList{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="head">
+        <h4>Search:</h4>
+        <div id="search">
+            <form id="frmFirst" method="get" onsubmit="currentPage = 1;toRequestSearch(event,'GET',
+            urlLink,currentPage)">
+                <label>
+                    <span class="inp">Tittle:</span>
+                    <input type="text" name="lookUp"><br>
+                </label>
+                <label>
+                    <span class="inp">Type:</span>
+                    <select name="typeWatch">
+                        <option>Movie</option>
+                        <option>Series</option>
+                        <option>Episode</option>
+                    </select>
+                </label>
+                <label>
+                    <input value="Search" type="submit" id="sub">
+                </label>
+            </form>
+        </div>
+    </div>
+    <div id="foolFilms">
+        <div id="choose"></div>
+        <ul id="list">
+            <li id="startList"><<</li>
+            <li id="lastList">>></li>
+        </ul>
+    </div>
+    <div id="infoFilms">
+        <p>Film info:</p>
+        <div id="infoOut"></div>
+        <div id="close">&#10060;</div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
